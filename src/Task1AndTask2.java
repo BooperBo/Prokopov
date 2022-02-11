@@ -44,12 +44,12 @@ public class Task1AndTask2 {
         int x = scanner.nextInt(); // Ввод целого числа
         int z = scanner.nextInt();
         int y = scanner.nextInt();
-        int s = scanner.nextInt();
+        int sin = scanner.nextInt();
 
 //      Блок обработки исключения
         try {
             if (x >= 0 && x < 10 && z >= 0 && z < 10 && y >= 0 && y < 10) {
-                a2 = (2 * Math.cos(x - Math.PI / 6)) / (0.5 + Math.pow(s, 2) * y);
+                a2 = (2 * Math.cos(x - Math.PI / 6)) / (0.5 + (Math.sin(Math.pow(sin, 2)) * y));
                 b2 = 1 + (Math.pow(z, 2) / (3 + (Math.pow(z, 2) / 5)));
                 System.out.printf("Значение а = %f\n", a2);
                 System.out.printf("Значение b = %f", b2);
