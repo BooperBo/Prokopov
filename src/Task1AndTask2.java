@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Task1AndTask2 {
     public static void main(String[] args) {
 
@@ -32,26 +34,34 @@ public class Task1AndTask2 {
         System.out.println("\n-------------------------------");
 
 //      Вторая задача
+        Scanner scanner = new Scanner(System.in); // Позволяет считывать входные данные в консоль
+
         System.out.println("\nЗадача № 2");
 
+        System.out.println("Введите целые значения для x, y, z, sin от 0-10");
+
         double a2, b2;
-        int x = random(0, 20); // случайное число от 0-20
-        int z = random(0, 20);
-        int y = random(0, 20);
+        int x = scanner.nextInt(); // Ввод целого числа
+        int z = scanner.nextInt();
+        int y = scanner.nextInt();
+        int s = scanner.nextInt();
 
-
-        a2 = (2 * Math.cos(x - Math.PI / 6)) / (0.5 + Math.pow(Math.sin(random(0, 10)), 2) * y);
-        b2 = 1 + (Math.pow(z, 2) / (3 + (Math.pow(z, 2) / 5)));
-
-        System.out.printf("Случайные числа:\n x = %d\n z = %d\n y = %d\n", x, z, y);
-        System.out.printf("Значение а = %f\n", a2);
-        System.out.printf("Значение b = %f", b2);
-    }
-
-    public static int random(int min, int max) {
-        return (int) (Math.random() * ((max - min) + 1)) + min;
+//      Блок обработки исключения
+        try {
+            if (x >= 0 && x < 10 && z >= 0 && z < 10 && y >= 0 && y < 10) {
+                a2 = (2 * Math.cos(x - Math.PI / 6)) / (0.5 + Math.pow(s, 2) * y);
+                b2 = 1 + (Math.pow(z, 2) / (3 + (Math.pow(z, 2) / 5)));
+                System.out.printf("Значение а = %f\n", a2);
+                System.out.printf("Значение b = %f", b2);
+            } else {
+                throw new IllegalArgumentException("Введено неверное значение. Введите целое число от 0-10"); // бросает исключение
+            }
+        } catch (IllegalArgumentException e) {  // обрабатываем исключение
+            e.printStackTrace();
+        }
     }
 }
+
 
 
 
