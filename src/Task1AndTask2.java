@@ -9,15 +9,17 @@ public class Task1AndTask2 {
 //        sqrt - метод извлечения квадратного корня
 //        cbrd - извелечение кубического корня
 //        pow - возведение в степень
-//        log - натуральнйы логарифм
+//        log - натуральный логарифм
 //        log10 - десятичный логарифм
         a1 = (0.75 * Math.sqrt(0.5)) - (0.5 * Math.cbrt(4));
         b1 = Math.pow(100, 0.5 * Math.log(9) - Math.log10(2)) * (Math.tan(1 / 3));
 
         if (a1 > b1) {
             k = Math.sqrt((15 * Math.pow(a1, 2)) + (21 * Math.pow(b1, 2)));
+            System.out.println("Выполнилось условие а > b");
         } else if (a1 <= b1) {
             k = Math.sqrt((15 * Math.pow(b1, 2)) + (21 * Math.pow(a1, 2)));
+            System.out.println("Выполнилось условие a <= b");
         }
         System.out.printf("Значение a = %f\n", a1); // %f - это число с плавающей точкой
         System.out.printf("Значение b = %f\n", b1); // \n - это перенос на новую строку
