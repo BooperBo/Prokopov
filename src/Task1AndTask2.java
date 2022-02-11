@@ -34,9 +34,9 @@ public class Task1AndTask2 {
         System.out.println("\n-------------------------------");
 
 //      Вторая задача
-        Scanner scanner = new Scanner(System.in); // Позволяет считывать входные данные в консоль
+        Scanner scanner = new Scanner(System.in); // Позволяет считывать входные данные с консоли
 
-        System.out.println("\nЗадача № 2");
+        System.out.println("\nЗадача №2");
 
         System.out.println("Введите целые значения для x, y, z, sin от 0-10");
 
