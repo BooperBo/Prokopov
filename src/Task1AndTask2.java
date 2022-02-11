@@ -49,7 +49,7 @@ public class Task1AndTask2 {
 
 //      Блок обработки исключения
         try {
-            if (x >= 0 && x < 10 && z >= 0 && z < 10 && y >= 0 && y < 10 && sin >= 0 && sin < 10) {
+            if (x >= 0 && x <= 10 && z >= 0 && z <= 10 && y >= 0 && y <= 10 && sin >= 0 && sin <= 10) {
                 a2 = (2 * Math.cos(x - Math.PI / 6)) / (0.5 + (Math.sin(Math.pow(sin, 2)) * y));
                 b2 = 1 + (Math.pow(z, 2) / (3 + (Math.pow(z, 2) / 5)));
                 System.out.printf("Значение а = %f\n", a2);
