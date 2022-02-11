@@ -16,7 +16,7 @@ public class Task1AndTask2 {
         double a1, b1, k = 0;
 
         a1 = (0.75 * Math.sqrt(0.5)) - (0.5 * Math.cbrt(4));
-        b1 = Math.pow(100, 0.5 * Math.log(9) - Math.log10(2)) * (Math.tan(1 / 3));
+        b1 = Math.pow(100, 0.5 * Math.log(9) - Math.log10(2)) * (Math.tan(0.33));
 
         System.out.printf("Значение a = %f\n", a1); // %f - это число с плавающей точкой
         System.out.printf("Значение b = %f\n", b1); // \n - это перенос на новую строку
