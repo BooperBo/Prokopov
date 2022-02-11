@@ -1,17 +1,17 @@
 public class Task1AndTask2 {
     public static void main(String[] args) {
 
-        //      Первая задача
-        System.out.println("Задача №1");
-
-        double a1, b1, k = 0;
-
 //        Math - это пакет, где лежат математические операции
 //        sqrt - метод извлечения квадратного корня
 //        cbrd - извелечение кубического корня
 //        pow - возведение в степень
 //        log - натуральный логарифм
 //        log10 - десятичный логарифм
+
+        //      Первая задача
+        System.out.println("Задача №1");
+
+        double a1, b1, k = 0;
 
         a1 = (0.75 * Math.sqrt(0.5)) - (0.5 * Math.cbrt(4));
         b1 = Math.pow(100, 0.5 * Math.log(9) - Math.log10(2)) * (Math.tan(1 / 3));
@@ -29,6 +29,8 @@ public class Task1AndTask2 {
 
         System.out.printf("Значение k = %f\n", k);
 
+        System.out.println("\n-------------------------------");
+
 //      Вторая задача
         System.out.println("\nЗадача № 2");
 
@@ -38,7 +40,7 @@ public class Task1AndTask2 {
         int y = random(0, 20);
 
 
-        a2 = (2 * Math.cos(x - Math.PI / 6)) / (0.5 + Math.pow(Math.sin(random(0,10)), 2) * y);
+        a2 = (2 * Math.cos(x - Math.PI / 6)) / (0.5 + Math.pow(Math.sin(random(0, 10)), 2) * y);
         b2 = 1 + (Math.pow(z, 2) / (3 + (Math.pow(z, 2) / 5)));
 
         System.out.printf("Случайные числа:\n x = %d\n z = %d\n y = %d\n", x, z, y);
