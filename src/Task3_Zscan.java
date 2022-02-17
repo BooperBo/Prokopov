@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Zscan {
+public class Task3_Zscan {
     static Scanner sc;
     static int n; // указывает количество строк и столбцов матрицы
     static int[][] point;

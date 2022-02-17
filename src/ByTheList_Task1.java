@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ByTheList_Task1AndTask2 {
+public class ByTheList_Task1 {
     public static void main(String[] args) {
 
 //        Math - это пакет, где лежат математические операции
