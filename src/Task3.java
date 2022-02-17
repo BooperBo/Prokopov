@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ByTheList_Task3 {
+public class Task3 {
 
     static boolean stop;
 
