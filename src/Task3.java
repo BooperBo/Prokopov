@@ -6,7 +6,7 @@ public class Task3 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите целые значения: amin, amax, bmin, bmax, da, db, n");
+        System.out.println("Введите целые значения: amin, amax, bmin, bmax, da, db, n от 0-10");
         int amin = scanner.nextInt();
         int amax = scanner.nextInt();
         int bmin = scanner.nextInt();
@@ -38,6 +38,8 @@ public class Task3 {
                             if (a > b) {
                                 f = ((i + 1) * Math.pow((2 * a + b * i), 1.5)) / (Math.pow(b - a, 2)) + a * i + Math.pow(i, 2);
                                 System.out.println("Выполнилось условие а > b");
+                                System.out.format("Значения: a     b     Yi\n");
+                                System.out.printf("%13.1f %5.1f %5.1f\n", b, a, f);
                             } else {
                                 f = ((i - 1) * Math.pow((2 * b + a * i), 1.5)) / (Math.pow(b - a, 2)) + a * i + Math.pow(i, 2);
                                 System.out.println("Выполнилось условие а <= b");
