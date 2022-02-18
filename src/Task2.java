@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class Task2 {
 
-    static boolean stop;
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите целые значения: amin, amax, bmin, bmax, da, db, n от 0-10");
@@ -15,6 +13,9 @@ public class Task2 {
         double db = scanner.nextDouble();
         int n = scanner.nextInt();
 
+//      Это костыль, он нужен, чтобы программа прекратила свою работу,
+//      если мы вводим число из не нужного диапазона от 0-10, например число 12 или -5.
+//      без него программа работает дальше с ошибкой.
         double yi = functionYi(amin, amax, bmin, bmax, da, db, n);
         if (yi != 0) {
             functionU(n, yi);
@@ -27,12 +28,12 @@ public class Task2 {
         double a, b, i;
         double f = 0;
         try {
-            if (amin >= 0 && amin <= 10 && amax >= 0 && amax <= 10 &&
+            if (amin >= 0 && amin <= 10 && amax >= 0 && amax <= 10 && // условия диапазона 0-10
                     bmin >= 0 && bmin <= 10 &&
                     da >= 0 && da <= 10 && db >= 0 && db <= 10 &&
                     n >= 0 && n <= 10) {
 
-                for (a = amin; a <= amax; a = +da) {
+                for (a = amin; a <= amax; a = +da) { // проходимся по всем точкам с шагом
                     for (b = bmin; b <= bmax; b = +db) {
                         for (i = 0; 1 <= n; i = +1) {
                             if (a > b) {
@@ -60,7 +61,7 @@ public class Task2 {
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
-        return f;
+        return f; // возвращаем итог
 
     }
 

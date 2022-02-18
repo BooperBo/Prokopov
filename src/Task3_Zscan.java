@@ -82,7 +82,7 @@ public class Task3_Zscan {
         summString(point);
     }
 
-    public static int summMass(int a[][]) {
+    public static int summMass(int a[][]) { // Выводим сумму всех элементов массива
         int x = a.length;
         int summ = 0;
         for (int i = 0; i < x; i++) {
@@ -93,7 +93,7 @@ public class Task3_Zscan {
         System.out.println("Общая сумма всех элементова массива равна: " + summ);
         return summ;
     }
-    public static void printMatrix(int a[][]) {
+    public static void printMatrix(int a[][]) { // Выводим массив
         int x = a.length;
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
@@ -102,7 +102,7 @@ public class Task3_Zscan {
             System.out.println();
         }
     }
-    public static void summString(int a[][]) {
+    public static void summString(int a[][]) { // Сумма элементов массива по строкам
         int x = a.length;
         int s = 0;
         int Str1 = 0;
