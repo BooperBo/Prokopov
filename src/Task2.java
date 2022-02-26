@@ -33,9 +33,9 @@ public class Task2 {
                     da >= 0 && da <= 10 && db >= 0 && db <= 10 &&
                     n >= 0 && n <= 10) {
 
-                for (a = amin; a <= amax; a = +da) { // проходимся по всем точкам с шагом
-                    for (b = bmin; b <= bmax; b = +db) {
-                        for (i = 0; 1 <= n; i = +1) {
+                for (a = amin; a <= amax; a += da) { // проходимся по всем точкам с шагом
+                    for (b = bmin; b <= bmax; b += db) {
+                        for (i = 0; 1 <= n; i += 1) {
                             if (a > b) {
                                 f = ((i + 1) * Math.pow((2 * a + b * i), 1.5)) / (Math.pow(b - a, 2)) + a * i + Math.pow(i, 2);
                                 System.out.println("Выполнилось условие а > b");
